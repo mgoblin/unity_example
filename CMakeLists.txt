@@ -18,3 +18,22 @@ add_executable(${PROJECT_NAME} src/main.c)
 
 # Compiler options for GCC
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -O2)
+
+# Enable testing
+enable_testing()
+
+add_library(unity STATIC libs/unity/unity.c)
+
+target_include_directories(unity PUBLIC libs/unity)
+
+# Add test executable
+add_executable(test_${PROJECT_NAME} 
+    # src/main.c
+    tests/test_main.c
+)
+
+# Link Unity testing framework
+target_link_libraries(test_${PROJECT_NAME} unity)
+
+# Add test
+add_test(NAME test_${PROJECT_NAME} COMMAND test_${PROJECT_NAME})
