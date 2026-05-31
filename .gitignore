@@ -1,0 +1,44 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+dist/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+CMakeLists.txt.user
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# Compiler and linker output (C-specific)
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.bin
+
+# Generated executables
+# Adjust the name based on your project (e.g., unity_example)
+unity_example
+a.out
+
+# Editor and IDE files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary and log files
+*.log
+*.tmp
